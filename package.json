@@ -1,0 +1,37 @@
+{
+  "name": "pdf-optimizer",
+  "version": "1.0.0",
+  "description": "Azure-hosted PDF JavaScript analyzer and converter for SharePoint compatibility",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "clean": "rimraf dist",
+    "start": "func start",
+    "test": "jest"
+  },
+  "keywords": [
+    "pdf",
+    "javascript",
+    "sharepoint",
+    "azure",
+    "indesign"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "@azure/storage-blob": "^12.17.0",
+    "pdf-lib": "^1.17.1",
+    "pdf-parse": "^1.1.1",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@azure/functions-core-tools": "^4.0.5455",
+    "@types/node": "^20.10.0",
+    "@types/uuid": "^9.0.7",
+    "azure-functions-core-tools": "^4.x",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3"
+  }
+}

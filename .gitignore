@@ -1,0 +1,39 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+*.js.map
+*.d.ts
+
+# Azure Functions
+local.settings.json
+.vscode/
+__azurite_db*__.json
+__blobstorage__/
+__queuestorage__/
+__azurite_db*__.json
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+
+# Test coverage
+coverage/
+
+# Temporary files
+temp/
+*.tmp

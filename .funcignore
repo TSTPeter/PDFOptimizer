@@ -1,0 +1,13 @@
+.git*
+.vscode
+local.settings.json
+test
+.env
+node_modules
+.DS_Store
+*.log
+coverage
+*.md
+src/**/*.ts
+!dist/**
+tsconfig.json

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF JavaScript Optimizer for SharePoint</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>PDF JavaScript Optimizer</h1>
+      <p class="subtitle">Convert InDesign PDFs with JavaScript for SharePoint compatibility</p>
+    </header>
+
+    <main>
+      <!-- Step 1: Upload -->
+      <section id="upload-section" class="section active">
+        <div class="section-header">
+          <span class="step-number">1</span>
+          <h2>Upload PDF</h2>
+        </div>
+        <div class="section-content">
+          <div class="upload-area" id="upload-area">
+            <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+            </svg>
+            <p class="upload-text">Drag and drop your PDF here</p>
+            <p class="upload-subtext">or</p>
+            <button class="btn btn-secondary" onclick="document.getElementById('file-input').click()">
+              Choose File
+            </button>
+            <input type="file" id="file-input" accept=".pdf" hidden>
+          </div>
+          <div id="file-info" class="file-info hidden">
+            <div class="file-details">
+              <svg class="file-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <div>
+                <p class="file-name" id="file-name"></p>
+                <p class="file-size" id="file-size"></p>
+              </div>
+            </div>
+            <button class="btn btn-primary" id="analyze-btn">
+              Analyze PDF
+            </button>
+          </div>
+          <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Analyzing PDF...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 2: Review Analysis -->
+      <section id="analysis-section" class="section">
+        <div class="section-header">
+          <span class="step-number">2</span>
+          <h2>Review Analysis</h2>
+        </div>
+        <div class="section-content">
+          <div id="analysis-results" class="analysis-results"></div>
+        </div>
+      </section>
+
+      <!-- Step 3: Convert & Download -->
+      <section id="convert-section" class="section">
+        <div class="section-header">
+          <span class="step-number">3</span>
+          <h2>Convert & Download</h2>
+        </div>
+        <div class="section-content">
+          <div class="convert-actions">
+            <button class="btn btn-primary btn-large" id="convert-btn">
+              Convert PDF
+            </button>
+            <button class="btn btn-secondary" id="reset-btn">
+              Start Over
+            </button>
+          </div>
+          <div id="convert-loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Converting PDF...</p>
+          </div>
+          <div id="convert-results" class="convert-results hidden">
+            <div class="success-message">
+              <svg class="success-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h3>Conversion Complete!</h3>
+              <p id="conversion-summary"></p>
+              <button class="btn btn-primary btn-large" id="download-btn">
+                Download Optimized PDF
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
